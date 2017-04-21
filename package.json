@@ -1,1 +1,39 @@
-{     "devDependencies": {         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-instagram-scrape-account-stats",     "homepage": "https://github.com/npmtest/node-npmtest-instagram-scrape-account-stats",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-instagram-scrape-account-stats.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### basic test coverage for  [instagram-scrape-account-stats (v0.0.0)](https://github.com/slang800/instagram-scrape-account-stats)  [![npm package](https://img.shields.io/npm/v/npmtest-instagram-scrape-account-stats.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-instagram-scrape-account-stats) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-instagram-scrape-account-stats.svg)](https://travis-ci.org/npmtest/node-npmtest-instagram-scrape-account-stats)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-instagram-scrape-account-stats",
+    "keywords": [
+        "coverage",
+        "test",
+        "instagram-scrape-account-stats"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_instagram_scrape_account_stats.js",
+    "name": "npmtest-instagram-scrape-account-stats",
+    "nameAlias": "npmtest_instagram_scrape_account_stats",
+    "nameOriginal": "npmtest-instagram-scrape-account-stats",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-instagram-scrape-account-stats.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
